@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://do2ombxq7jnm3"]
+
+[ext_resource type="Texture2D" uid="uid://c2rcd2mcl0vvt" path="res://Sprites/Paddle.png" id="1_77hqn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sph2r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26w1k"]
+size = Vector2(2, 22)
+
+[node name="Wall" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_sph2r")
+
+[node name="Wall" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_77hqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_26w1k")

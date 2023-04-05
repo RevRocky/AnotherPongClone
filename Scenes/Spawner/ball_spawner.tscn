@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxwnmao6pg0hr"]
+
+[ext_resource type="Script" path="res://Scenes/Spawner/BallSpawner.gd" id="1_forcl"]
+
+[node name="BallSpawner" type="Node"]
+script = ExtResource("1_forcl")

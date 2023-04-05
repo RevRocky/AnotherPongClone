@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt50ns43pw73u"]
+
+[ext_resource type="PackedScene" uid="uid://pq0qrlklvbyc" path="res://Scenes/Paddle/Paddle.tscn" id="1_3qls6"]
+[ext_resource type="PackedScene" uid="uid://do2ombxq7jnm3" path="res://Scenes/TestRoom/Wall.tscn" id="2_ltwet"]
+[ext_resource type="PackedScene" uid="uid://cxwnmao6pg0hr" path="res://Scenes/Spawner/ball_spawner.tscn" id="3_ifwd2"]
+
+[node name="TestRoom" type="Node"]
+
+[node name="Paddle" parent="." instance=ExtResource("1_3qls6")]
+position = Vector2(34, 204)
+scale = Vector2(5, 5)
+
+[node name="BackWall" parent="." instance=ExtResource("2_ltwet")]
+position = Vector2(1153, 326)
+scale = Vector2(5, 29.5)
+
+[node name="BottomWall" parent="." instance=ExtResource("2_ltwet")]
+position = Vector2(577, 658)
+rotation = -1.5708
+scale = Vector2(8.814, 52)
+
+[node name="TopWall" parent="." instance=ExtResource("2_ltwet")]
+position = Vector2(579, -9)
+rotation = -1.5708
+scale = Vector2(8.814, 52)
+
+[node name="BallSpawner" parent="." instance=ExtResource("3_ifwd2")]

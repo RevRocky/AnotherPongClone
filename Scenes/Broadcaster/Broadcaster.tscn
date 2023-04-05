@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d8m6va1ur8xq"]
+
+[ext_resource type="Script" path="res://Scenes/Broadcaster/Broadcaster.gd" id="1_b52ab"]
+
+[node name="Broadcaster" type="Node"]
+script = ExtResource("1_b52ab")

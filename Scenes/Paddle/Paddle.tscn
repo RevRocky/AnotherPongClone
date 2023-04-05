@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://pq0qrlklvbyc"]
+
+[ext_resource type="Script" path="res://Scenes/Paddle/Paddle.gd" id="1_q6wek"]
+[ext_resource type="Texture2D" uid="uid://c2rcd2mcl0vvt" path="res://Sprites/Paddle.png" id="2_273ba"]
+[ext_resource type="AudioStream" uid="uid://cn2js5ek4sv31" path="res://Sounds/BipPlayer.wav" id="3_g0bk8"]
+[ext_resource type="Script" path="res://Scenes/Paddle/PaddleSoundPlayer.gd" id="4_mcw6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cic6k"]
+size = Vector2(2.01674, 22)
+
+[node name="Paddle" type="CharacterBody2D"]
+scale = Vector2(9.917, 10)
+script = ExtResource("1_q6wek")
+
+[node name="PaddleSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_273ba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cic6k")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g0bk8")
+script = ExtResource("4_mcw6r")
